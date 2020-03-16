@@ -2,23 +2,24 @@
 
 namespace App\Shop\Products;
 
+use App\Shop\Base\BaseModel;
+use App\Shop\Base\Traits\SearchableTrait;
 use App\Shop\Brands\Brand;
 use App\Shop\Categories\Category;
 use App\Shop\ProductAttributes\ProductAttribute;
 use App\Shop\ProductImages\ProductImage;
-use Gloudemans\Shoppingcart\Contracts\Buyable;
-use Illuminate\Database\Eloquent\Model;
+use App\Shop\ProductMetas\ProductMeta;
 use Illuminate\Support\Collection;
-use Nicolaslopezj\Searchable\SearchableTrait;
 
-class Product extends Model implements Buyable
+class Product extends BaseModel
 {
     use SearchableTrait;
 
     public const MASS_UNIT = [
         'OUNCES' => 'oz',
         'GRAMS' => 'gms',
-        'POUNDS' => 'lbs'
+        'POUNDS' => 'lbs',
+        'GRAINS' => 'grain'
     ];
 
     public const DISTANCE_UNIT = [
@@ -124,7 +125,7 @@ class Product extends Model implements Buyable
      * @param string $term
      * @return Collection
      */
-    public function searchProduct(string $term) : Collection
+    public function searchProduct(string $term): Collection
     {
         return self::search($term)->get();
     }
@@ -143,5 +144,13 @@ class Product extends Model implements Buyable
     public function brand()
     {
         return $this->belongsTo(Brand::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function metas()
+    {
+        return $this->hasMany(ProductMeta::class);
     }
 }

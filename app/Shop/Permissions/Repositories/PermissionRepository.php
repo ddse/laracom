@@ -2,13 +2,13 @@
 
 namespace App\Shop\Permissions\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\Permissions\Exceptions\CreatePermissionErrorException;
 use App\Shop\Permissions\Exceptions\DeletePermissionErrorException;
 use App\Shop\Permissions\Exceptions\PermissionNotFoundErrorException;
 use App\Shop\Permissions\Exceptions\UpdatePermissionErrorException;
 use App\Shop\Permissions\Permission;
-use App\Shop\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
+use App\Shop\Permissions\Repositories\PermissionRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Collection;

@@ -4,18 +4,18 @@ namespace App\Http\Controllers\Admin\Addresses;
 
 use App\Shop\Addresses\Address;
 use App\Shop\Addresses\Repositories\AddressRepository;
-use App\Shop\Addresses\Repositories\Interfaces\AddressRepositoryInterface;
+use App\Shop\Addresses\Repositories\AddressRepositoryInterface;
 use App\Shop\Addresses\Requests\CreateAddressRequest;
 use App\Shop\Addresses\Requests\UpdateAddressRequest;
 use App\Shop\Addresses\Transformations\AddressTransformable;
 use App\Shop\Cities\City;
-use App\Shop\Cities\Repositories\Interfaces\CityRepositoryInterface;
+use App\Shop\Cities\Repositories\CityRepositoryInterface;
 use App\Shop\Countries\Country;
 use App\Shop\Countries\Repositories\CountryRepository;
-use App\Shop\Countries\Repositories\Interfaces\CountryRepositoryInterface;
-use App\Shop\Customers\Repositories\Interfaces\CustomerRepositoryInterface;
+use App\Shop\Countries\Repositories\CountryRepositoryInterface;
+use App\Shop\Customers\Repositories\CustomerRepositoryInterface;
 use App\Http\Controllers\Controller;
-use App\Shop\Provinces\Repositories\Interfaces\ProvinceRepositoryInterface;
+use App\Shop\Provinces\Repositories\ProvinceRepositoryInterface;
 use Illuminate\Http\Request;
 
 class AddressController extends Controller

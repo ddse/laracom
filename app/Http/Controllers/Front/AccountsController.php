@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Shop\Couriers\Repositories\Interfaces\CourierRepositoryInterface;
+use App\Shop\Couriers\Repositories\CourierRepositoryInterface;
 use App\Shop\Customers\Repositories\CustomerRepository;
-use App\Shop\Customers\Repositories\Interfaces\CustomerRepositoryInterface;
+use App\Shop\Customers\Repositories\CustomerRepositoryInterface;
 use App\Http\Controllers\Controller;
 use App\Shop\Orders\Order;
 use App\Shop\Orders\Transformers\OrderTransformable;

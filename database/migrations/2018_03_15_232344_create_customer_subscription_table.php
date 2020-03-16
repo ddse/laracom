@@ -20,17 +20,17 @@ class CreateCustomerSubscriptionTable extends Migration
             $table->timestamp('trial_ends_at')->nullable()->after('card_last_four');
         });
 
-        Schema::create('subscriptions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('customer_id');
-            $table->string('name');
-            $table->string('stripe_id');
-            $table->string('stripe_plan');
-            $table->integer('quantity');
-            $table->timestamp('trial_ends_at')->nullable();
-            $table->timestamp('ends_at')->nullable();
-            $table->timestamps();
-        });
+        // Schema::create('subscriptions', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->unsignedInteger('customer_id');
+        //     $table->string('name');
+        //     $table->string('stripe_id');
+        //     $table->string('stripe_plan');
+        //     $table->integer('quantity');
+        //     $table->timestamp('trial_ends_at')->nullable();
+        //     $table->timestamp('ends_at')->nullable();
+        //     $table->timestamps();
+        // });
     }
 
     /**
@@ -40,7 +40,7 @@ class CreateCustomerSubscriptionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subscriptions');
+        // Schema::dropIfExists('subscriptions');
         Schema::table('customers', function (Blueprint $table) {
             $table->dropColumn([
                 'stripe_id',

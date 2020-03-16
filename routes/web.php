@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,9 +13,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
 
 /**
  * Admin routes
@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['employee'], 'as' => 'admin.
                 Route::resource('products', 'ProductController');
                 Route::get('remove-image-product', 'ProductController@removeImage')->name('product.remove.image');
                 Route::get('remove-image-thumb', 'ProductController@removeThumbnail')->name('product.remove.thumb');
+                Route::get('excel_upload', 'ProductExcelController@index')->name('product.excel');
             });
             Route::namespace('Customers')->group(function () {
                 Route::resource('customers', 'CustomerController');

@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Shop\Addresses\Repositories\Interfaces\AddressRepositoryInterface;
+use App\Shop\Addresses\Repositories\AddressRepositoryInterface;
 use App\Shop\Cart\Requests\CartCheckoutRequest;
-use App\Shop\Carts\Repositories\Interfaces\CartRepositoryInterface;
+use App\Shop\Carts\Repositories\CartRepositoryInterface;
 use App\Shop\Carts\Requests\PayPalCheckoutExecutionRequest;
 use App\Shop\Carts\Requests\StripeExecutionRequest;
-use App\Shop\Couriers\Repositories\Interfaces\CourierRepositoryInterface;
+use App\Shop\Couriers\Repositories\CourierRepositoryInterface;
 use App\Shop\Customers\Customer;
 use App\Shop\Customers\Repositories\CustomerRepository;
-use App\Shop\Customers\Repositories\Interfaces\CustomerRepositoryInterface;
-use App\Shop\Orders\Repositories\Interfaces\OrderRepositoryInterface;
+use App\Shop\Customers\Repositories\CustomerRepositoryInterface;
+use App\Shop\Orders\Repositories\OrderRepositoryInterface;
 use App\Shop\PaymentMethods\Paypal\Exceptions\PaypalRequestError;
 use App\Shop\PaymentMethods\Paypal\Repositories\PayPalExpressCheckoutRepository;
 use App\Shop\PaymentMethods\Stripe\Exceptions\StripeChargingErrorException;
 use App\Shop\PaymentMethods\Stripe\StripeRepository;
-use App\Shop\Products\Repositories\Interfaces\ProductRepositoryInterface;
+use App\Shop\Products\Repositories\ProductRepositoryInterface;
 use App\Shop\Products\Transformations\ProductTransformable;
 use App\Shop\Shipping\ShippingInterface;
 use Exception;

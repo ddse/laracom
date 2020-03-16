@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Front;
 
 use App\Shop\Carts\Requests\AddToCartRequest;
 use App\Shop\Carts\Requests\UpdateCartRequest;
-use App\Shop\Carts\Repositories\Interfaces\CartRepositoryInterface;
-use App\Shop\Couriers\Repositories\Interfaces\CourierRepositoryInterface;
+use App\Shop\Carts\Repositories\CartRepositoryInterface;
+use App\Shop\Couriers\Repositories\CourierRepositoryInterface;
 use App\Shop\ProductAttributes\Repositories\ProductAttributeRepositoryInterface;
 use App\Shop\Products\Product;
-use App\Shop\Products\Repositories\Interfaces\ProductRepositoryInterface;
+use App\Shop\Products\Repositories\ProductRepositoryInterface;
 use App\Shop\Products\Repositories\ProductRepository;
 use App\Shop\Products\Transformations\ProductTransformable;
 use Gloudemans\Shoppingcart\CartItem;

@@ -2,9 +2,9 @@
 
 namespace App\Shop\Permissions;
 
-use Laratrust\Models\LaratrustPermission;
+use Spatie\Permission\Models\Permission as BasePermission;
 
-class Permission extends LaratrustPermission
+class Permission extends BasePermission/*extends LaratrustPermission*/
 {
     protected $fillable = [
         'name',

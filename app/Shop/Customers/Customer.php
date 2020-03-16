@@ -3,12 +3,12 @@
 namespace App\Shop\Customers;
 
 use App\Shop\Addresses\Address;
+use App\Shop\Base\Traits\SearchableTrait;
 use App\Shop\Orders\Order;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Cashier\Billable;
-use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Customer extends Authenticatable
 {

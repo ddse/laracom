@@ -11,6 +11,7 @@ class MyCitiesTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::table('cities')->truncate();
         \DB::table('cities')->insert(array (
             0 =>
                 array (

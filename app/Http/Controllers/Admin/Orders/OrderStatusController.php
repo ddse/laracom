@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Orders;
 
-use App\Shop\OrderStatuses\Repositories\Interfaces\OrderStatusRepositoryInterface;
+use App\Shop\OrderStatuses\Repositories\OrderStatusRepositoryInterface;
 use App\Shop\OrderStatuses\Repositories\OrderStatusRepository;
 use App\Shop\OrderStatuses\Requests\CreateOrderStatusRequest;
 use App\Shop\OrderStatuses\Requests\UpdateOrderStatusRequest;

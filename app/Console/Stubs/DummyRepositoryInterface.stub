@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Shop\Dummies\Repositories\Interfaces;
+namespace App\Shop\Dummies\Repositories;
 
 use App\Shop\Dummies\Dummy;
 use Illuminate\Support\Collection;
-use Jsdecena\Baserepo\BaseRepositoryInterface;
+use App\Shop\Base\Repositories\BaseRepositoryInterface;
 
 interface DummyRepositoryInterface extends BaseRepositoryInterface
 {

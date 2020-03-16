@@ -2,9 +2,9 @@
 
 namespace App\Shop\Roles;
 
-use Laratrust\Models\LaratrustRole;
+use Spatie\Permission\Models\Role as BaseRole;
 
-class Role extends LaratrustRole
+class Role extends BaseRole
 {
     protected $fillable = [
         'name',

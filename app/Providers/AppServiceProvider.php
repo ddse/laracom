@@ -2,11 +2,12 @@
 
 namespace App\Providers;
 
+use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Cashier\Cashier;
 
 class AppServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap any application services.
      *
@@ -14,9 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Cashier::useCurrency(config('cart.currency'), config('cart.currency_symbol'));
+        //
+        Builder::defaultStringLength(191); // Update defaultStringLength
     }
-
     /**
      * Register any application services.
      *

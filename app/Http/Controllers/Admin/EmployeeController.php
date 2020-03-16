@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Shop\Admins\Requests\CreateEmployeeRequest;
 use App\Shop\Admins\Requests\UpdateEmployeeRequest;
 use App\Shop\Employees\Repositories\EmployeeRepository;
-use App\Shop\Employees\Repositories\Interfaces\EmployeeRepositoryInterface;
+use App\Shop\Employees\Repositories\EmployeeRepositoryInterface;
 use App\Shop\Roles\Repositories\RoleRepositoryInterface;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Shop\Customers\Customer;
 use App\Http\Controllers\Controller;
-use App\Shop\Customers\Repositories\Interfaces\CustomerRepositoryInterface;
+use App\Shop\Customers\Repositories\CustomerRepositoryInterface;
 use App\Shop\Customers\Requests\CreateCustomerRequest;
 use App\Shop\Customers\Requests\RegisterCustomerRequest;
 use Illuminate\Http\Request;

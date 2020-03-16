@@ -2,7 +2,7 @@
 
 namespace App\Shop\States\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\Cities\City;
 use App\Shop\Cities\Repositories\CityRepository;
 use App\Shop\States\State;

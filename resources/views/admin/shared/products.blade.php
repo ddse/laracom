@@ -1,4 +1,4 @@
-@if(!$products->isEmpty())
+@if(!$elements->isEmpty())
     <table class="table">
         <thead>
         <tr>
@@ -11,7 +11,7 @@
         </tr>
         </thead>
         <tbody>
-        @foreach ($products as $product)
+        @foreach ($elements as $product)
             <tr>
                 <td>{{ $product->id }}</td>
                 <td>

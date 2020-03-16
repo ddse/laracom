@@ -1,15 +1,15 @@
 <?php
 namespace App\Shop\Roles\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
-use App\Shop\Permissions\Permission;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\Roles\Exceptions\CreateRoleErrorException;
 use App\Shop\Roles\Exceptions\DeleteRoleErrorException;
 use App\Shop\Roles\Exceptions\RoleNotFoundErrorException;
 use App\Shop\Roles\Exceptions\UpdateRoleErrorException;
-use App\Shop\Roles\Role;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Collection;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class RoleRepository extends BaseRepository implements RoleRepositoryInterface
 {
@@ -101,7 +101,7 @@ class RoleRepository extends BaseRepository implements RoleRepositoryInterface
      */
     public function attachToPermission(Permission $permission)
     {
-        $this->model->attachPermission($permission);
+        $this->model->givePermissionTo($permission);
     }
 
     /**
@@ -109,7 +109,7 @@ class RoleRepository extends BaseRepository implements RoleRepositoryInterface
      */
     public function attachToPermissions(... $permissions)
     {
-        $this->model->attachPermissions($permissions);
+        $this->model->givePermissionTo($permissions);
     }
 
     /**

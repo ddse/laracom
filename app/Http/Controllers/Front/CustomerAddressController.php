@@ -6,10 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Shop\Addresses\Requests\CreateAddressRequest;
 use App\Shop\Addresses\Requests\UpdateAddressRequest;
 use App\Shop\Addresses\Repositories\AddressRepository;
-use App\Shop\Cities\Repositories\Interfaces\CityRepositoryInterface;
-use App\Shop\Addresses\Repositories\Interfaces\AddressRepositoryInterface;
-use App\Shop\Countries\Repositories\Interfaces\CountryRepositoryInterface;
-use App\Shop\Provinces\Repositories\Interfaces\ProvinceRepositoryInterface;
+use App\Shop\Cities\Repositories\CityRepositoryInterface;
+use App\Shop\Addresses\Repositories\AddressRepositoryInterface;
+use App\Shop\Countries\Repositories\CountryRepositoryInterface;
+use App\Shop\Provinces\Repositories\ProvinceRepositoryInterface;
 
 class CustomerAddressController extends Controller
 {

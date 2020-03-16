@@ -2,17 +2,16 @@
 
 namespace App\Shop\Carts\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
+use App\Shop\Carts\Exceptions\InvalidRowIDException;
 use App\Shop\Carts\Exceptions\ProductInCartNotFoundException;
-use App\Shop\Carts\Repositories\Interfaces\CartRepositoryInterface;
+use App\Shop\Carts\Models\CartItem;
+use App\Shop\Carts\Repositories\CartRepositoryInterface;
 use App\Shop\Carts\ShoppingCart;
 use App\Shop\Couriers\Courier;
 use App\Shop\Customers\Customer;
 use App\Shop\Products\Product;
 use App\Shop\Products\Repositories\ProductRepository;
-use Gloudemans\Shoppingcart\Cart;
-use Gloudemans\Shoppingcart\CartItem;
-use Gloudemans\Shoppingcart\Exceptions\InvalidRowIDException;
 use Illuminate\Support\Collection;
 
 class CartRepository extends BaseRepository implements CartRepositoryInterface

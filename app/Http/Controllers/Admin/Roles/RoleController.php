@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\Roles;
 
 use App\Http\Controllers\Controller;
-use App\Shop\Permissions\Repositories\Interfaces\PermissionRepositoryInterface;
+use App\Shop\Permissions\Repositories\PermissionRepositoryInterface;
 use App\Shop\Roles\Repositories\RoleRepository;
 use App\Shop\Roles\Repositories\RoleRepositoryInterface;
 use App\Shop\Roles\Requests\CreateRoleRequest;

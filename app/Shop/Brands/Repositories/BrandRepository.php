@@ -2,7 +2,7 @@
 
 namespace App\Shop\Brands\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\Brands\Brand;
 use App\Shop\Brands\Exceptions\BrandNotFoundErrorException;
 use App\Shop\Brands\Exceptions\CreateBrandErrorException;
@@ -55,6 +55,9 @@ class BrandRepository extends BaseRepository implements BrandRepositoryInterface
         }
     }
 
+    public function findBrandByName(string $name) : Brand{
+        return $this->findOneByOrFail(['name' => $name]);
+    }
     /**
      * @param array $data
      * @param int $id

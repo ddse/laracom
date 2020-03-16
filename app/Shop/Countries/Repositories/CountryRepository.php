@@ -2,10 +2,10 @@
 
 namespace App\Shop\Countries\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\Countries\Exceptions\CountryInvalidArgumentException;
 use App\Shop\Countries\Exceptions\CountryNotFoundException;
-use App\Shop\Countries\Repositories\Interfaces\CountryRepositoryInterface;
+use App\Shop\Countries\Repositories\CountryRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use App\Shop\Countries\Country;

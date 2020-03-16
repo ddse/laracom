@@ -2,10 +2,10 @@
 
 namespace App\Shop\Roles\Repositories;
 
-use Jsdecena\Baserepo\BaseRepositoryInterface;
-use App\Shop\Permissions\Permission;
-use App\Shop\Roles\Role;
+use App\Shop\Base\Repositories\BaseRepositoryInterface;
 use Illuminate\Support\Collection;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 interface RoleRepositoryInterface extends BaseRepositoryInterface
 {

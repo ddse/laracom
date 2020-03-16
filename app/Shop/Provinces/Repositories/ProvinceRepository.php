@@ -2,11 +2,11 @@
 
 namespace App\Shop\Provinces\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\Countries\Country;
 use App\Shop\Provinces\Exceptions\ProvinceNotFoundException;
 use App\Shop\Provinces\Province;
-use App\Shop\Provinces\Repositories\Interfaces\ProvinceRepositoryInterface;
+use App\Shop\Provinces\Repositories\ProvinceRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Collection;

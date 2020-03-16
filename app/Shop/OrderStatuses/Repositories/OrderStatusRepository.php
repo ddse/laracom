@@ -2,11 +2,11 @@
 
 namespace App\Shop\OrderStatuses\Repositories;
 
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\OrderStatuses\Exceptions\OrderStatusInvalidArgumentException;
 use App\Shop\OrderStatuses\Exceptions\OrderStatusNotFoundException;
 use App\Shop\OrderStatuses\OrderStatus;
-use App\Shop\OrderStatuses\Repositories\Interfaces\OrderStatusRepositoryInterface;
+use App\Shop\OrderStatuses\Repositories\OrderStatusRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Collection;

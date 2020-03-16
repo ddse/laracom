@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin\Customers;
 
-use App\Shop\Addresses\Repositories\Interfaces\AddressRepositoryInterface;
-use App\Shop\Countries\Repositories\Interfaces\CountryRepositoryInterface;
-use App\Http\Controllers\Controller;
-use App\Shop\Provinces\Repositories\Interfaces\ProvinceRepositoryInterface;
+use App\Shop\Addresses\Repositories\AddressRepositoryInterface;
+use App\Shop\Countries\Repositories\CountryRepositoryInterface;
+use App\Shop\Base\Controller\BaseController;
+use App\Shop\Provinces\Repositories\ProvinceRepositoryInterface;
+use Illuminate\Routing\Controller;
 
 class CustomerAddressController extends Controller
 {

@@ -3,13 +3,13 @@
 namespace App\Shop\Customers\Repositories;
 
 use App\Shop\Addresses\Address;
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use App\Shop\Customers\Customer;
 use App\Shop\Customers\Exceptions\CreateCustomerInvalidArgumentException;
 use App\Shop\Customers\Exceptions\CustomerNotFoundException;
 use App\Shop\Customers\Exceptions\CustomerPaymentChargingErrorException;
 use App\Shop\Customers\Exceptions\UpdateCustomerInvalidArgumentException;
-use App\Shop\Customers\Repositories\Interfaces\CustomerRepositoryInterface;
+use App\Shop\Customers\Repositories\CustomerRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;

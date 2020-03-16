@@ -2,8 +2,8 @@
 
 namespace App\Shop\Categories;
 
+use App\Shop\Base\Nestedset\Traits\NodeTrait;
 use App\Shop\Products\Product;
-use Kalnoy\Nestedset\NodeTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model

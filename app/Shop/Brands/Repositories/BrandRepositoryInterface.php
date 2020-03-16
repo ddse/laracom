@@ -2,7 +2,7 @@
 
 namespace App\Shop\Brands\Repositories;
 
-use Jsdecena\Baserepo\BaseRepositoryInterface;
+use App\Shop\Base\Repositories\BaseRepositoryInterface;
 use App\Shop\Brands\Brand;
 use App\Shop\Products\Product;
 use Illuminate\Support\Collection;
@@ -12,6 +12,8 @@ interface BrandRepositoryInterface extends BaseRepositoryInterface
     public function createBrand(array $data): Brand;
 
     public function findBrandById(int $id) : Brand;
+    
+    public function findBrandByName(string $name) : Brand;
 
     public function updateBrand(array $data) : bool;
 

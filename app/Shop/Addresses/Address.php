@@ -2,6 +2,7 @@
 
 namespace App\Shop\Addresses;
 
+use App\Shop\Base\Traits\SearchableTrait;
 use App\Shop\Customers\Customer;
 use App\Shop\Orders\Order;
 use App\Shop\Provinces\Province;
@@ -9,7 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Shop\Cities\City;
 use App\Shop\Countries\Country;
-use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Address extends Model
 {

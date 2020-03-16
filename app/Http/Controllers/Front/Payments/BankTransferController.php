@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Front\Payments;
 
 use App\Http\Controllers\Controller;
-use App\Shop\Carts\Repositories\Interfaces\CartRepositoryInterface;
+use App\Shop\Carts\Repositories\CartRepositoryInterface;
 use App\Shop\Checkout\CheckoutRepository;
 use App\Shop\Orders\Repositories\OrderRepository;
 use App\Shop\OrderStatuses\OrderStatus;

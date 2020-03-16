@@ -11,14 +11,15 @@
 |
 */
 
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Shop\Roles\Role;
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
 $factory->define(Role::class, function (Faker\Generator $faker) {
 
     return [
         'name' => $faker->unique()->word,
-        'display_name' => '',
-        'description' => ''
+        // 'guard_name' => '',
+        // 'isActive' => 1
     ];
 });

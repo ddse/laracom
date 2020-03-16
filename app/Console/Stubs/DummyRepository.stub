@@ -4,10 +4,11 @@ namespace App\Shop\Dummies\Repositories;
 
 use App\Shop\Dummies\Dummy;
 use Illuminate\Support\Collection;
-use Jsdecena\Baserepo\BaseRepository;
+use App\Shop\Base\Repositories\BaseRepository;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use App\Shop\Dummies\Repositories\Interfaces\DummyRepositoryInterface;
+use App\Shop\Dummies\Repositories\DummyRepositoryInterface;
+use InvalidArgumentException;
 
 class DummyRepository extends BaseRepository implements DummyRepositoryInterface
 {
