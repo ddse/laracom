@@ -2,15 +2,24 @@
 
 namespace App\Shop\Base\Controller;
 
-use App\Http\Controllers\Controller;
 use App\Shop\Base\BaseFormRequest;
 use App\Shop\Base\Services\BaseServiceInterface;
 use App\Shop\Products\Requests\CreateProductRequest;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller;
 
 abstract class BaseController extends Controller
 {
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    // protected function loggedUser()
+    // {
+    //     return auth()->user();
+    // }
     private $service;
     protected $view = 'admin.categories';
     protected $route = '';

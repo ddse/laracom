@@ -87,7 +87,7 @@ class CustomerService extends BaseService implements CustomerServiceInterface
      */
     public function edit($id)
     {
-        return $this->repository->findCustomerById($id);
+        return ['element' => $this->repository->findCustomerById($id)];
     }
 
     /**

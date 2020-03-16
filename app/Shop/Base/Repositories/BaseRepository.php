@@ -148,7 +148,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
      */
     public function paginateArrayResults(array $data, int $perPage = 50)
     {
-        $page = Input::get('page', 1);
+        $page = request()->get('page', 1);
         $offset = ($page * $perPage) - $perPage;
 
         return new LengthAwarePaginator(

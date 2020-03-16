@@ -34,4 +34,8 @@ class Employee extends Authenticatable
     ];
 
     protected $dates = ['deleted_at'];
+
+    public function hasPermission($permission){
+        return $this->hasPermissionTo($permission);
+    }
 }

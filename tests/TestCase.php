@@ -3,6 +3,7 @@
 namespace Tests;
 
 use App\Shop\Addresses\Address;
+use App\Shop\Carts\Models\Cart;
 use App\Shop\Categories\Category;
 use App\Shop\Countries\Country;
 use App\Shop\Couriers\Courier;
@@ -16,7 +17,7 @@ use App\Shop\Permissions\Permission;
 use App\Shop\Products\Product;
 use App\Shop\Roles\Repositories\RoleRepository;
 use App\Shop\Roles\Role;
-use Gloudemans\Shoppingcart\Cart;
+// use Gloudemans\Shoppingcart\Cart;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
@@ -43,7 +44,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Set up the test
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -117,7 +118,7 @@ abstract class TestCase extends BaseTestCase
         $this->cart = new Cart($session, $events);
     }
 
-    public function tearDown()
+    public function tearDown():void
     {
         $this->artisan('migrate:reset');
         parent::tearDown();

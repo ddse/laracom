@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin\Categories;
 
+use App\Shop\Base\Controller\BaseController;
 use App\Shop\Categories\Repositories\CategoryRepository;
 use App\Shop\Categories\Requests\CreateCategoryRequest;
 use App\Shop\Categories\Requests\UpdateCategoryRequest;
-use App\Http\Controllers\Controller;
 use App\Shop\Categories\Repositories\CategoryRepositoryInterface;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoryController extends BaseController
 {
     /**
      * @var CategoryRepositoryInterface
@@ -25,7 +25,11 @@ class CategoryController extends Controller
     {
         $this->categoryRepo = $categoryRepository;
     }
-
+    
+    protected function setMiddleware(): array
+    {
+        return [];
+    }
     /**
      * Display a listing of the resource.
      *

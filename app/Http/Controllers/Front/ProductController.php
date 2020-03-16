@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Front;
 
 use App\Shop\Products\Product;
 use App\Shop\Products\Repositories\ProductRepositoryInterface;
-use App\Http\Controllers\Controller;
+use App\Shop\Base\Controller\BaseController;
 use App\Shop\Products\Transformations\ProductTransformable;
 
-class ProductController extends Controller
+class ProductController extends BaseController
 {
     use ProductTransformable;
 
